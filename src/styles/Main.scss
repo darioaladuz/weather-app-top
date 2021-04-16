@@ -1,0 +1,7 @@
+@import "variables", "reset", "currentWeather";
+
+body {
+  padding: 50px;
+  background: #fff;
+  background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+}

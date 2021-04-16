@@ -1,14 +1,16 @@
 import getCurrentWeather from './_GetCurrentWeather';
 import getWeekWeather from './_GetWeekWeather';
+import currentWeatherUI from './_CurrentWeatherUI';
+import displayCurrentWeather from './_DisplayCurrentWeather';
 
 export default function displayWeather() {
     const input = document.querySelector('input');
     const form = document.querySelector('form');
 
-    function display(weather) {
-        const h1 = document.querySelector('h1');
-        h1.textContent = `Current temperature in ${weather.name} is : ${weather.main.temp} ºC`
-    }
+    // function display(weather) {
+    //     const h1 = document.querySelector('h1');
+    //     h1.textContent = `Current temperature in ${weather.name} is : ${weather.main.temp} ºC`
+    // }
 
     async function getFullWeather(city) {
         const weather = await getCurrentWeather(city);
@@ -16,7 +18,8 @@ export default function displayWeather() {
         
         console.log(weather);
         console.log(weekWeather);
-        setTimeout(display(weather), 0)
+        // setTimeout(display(weather), 0);
+        setTimeout(displayCurrentWeather(weather), 0);
 }
 
     form.addEventListener('submit', async (e) => {

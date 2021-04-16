@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import displayWeather from './components/_DisplayWeather';
+import formUI from './components/_FormUI';
+import currentWeatherUI from './components/_CurrentWeatherUI';
 
 function component() {
 
@@ -8,9 +10,13 @@ function component() {
 
     h1.textContent = 'Weather App Project'
 
+    element.appendChild(formUI());
     element.appendChild(h1);
+    element.appendChild(currentWeatherUI());
 
-    displayWeather();
+    setTimeout(() => {
+        displayWeather();
+    }, 0);
 
     return element;
 }

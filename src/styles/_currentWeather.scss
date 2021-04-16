@@ -1,0 +1,30 @@
+.current-weather {
+  border: 1px solid black;
+  border-radius: 12px;
+  box-shadow: 2.5px 2.5px 12px 0px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  padding: 15px;
+  gap: 75px;
+  align-items: center;
+  justify-content: space-between;
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.875rem;
+
+    .weather-current {
+      font-size: 1.25rem !important;
+    }
+  }
+}
