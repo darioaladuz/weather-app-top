@@ -2,6 +2,7 @@ import getCurrentWeather from './_GetCurrentWeather';
 import getWeekWeather from './_GetWeekWeather';
 import currentWeatherUI from './_CurrentWeatherUI';
 import displayCurrentWeather from './_DisplayCurrentWeather';
+import displayDailyForecast from './_DisplayDailyForecast';
 
 export default function displayWeather() {
     const input = document.querySelector('input');
@@ -20,6 +21,7 @@ export default function displayWeather() {
         console.log(weekWeather);
         // setTimeout(display(weather), 0);
         setTimeout(displayCurrentWeather(weather), 0);
+        setTimeout(displayDailyForecast(weekWeather), 0);
 }
 
     form.addEventListener('submit', async (e) => {
