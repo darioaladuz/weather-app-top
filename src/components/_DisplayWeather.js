@@ -28,6 +28,7 @@ export default function displayWeather() {
         e.preventDefault();
         const city = input.value;
         getFullWeather(city);
+        input.value = "";
     })
 
     getFullWeather('barcelona');
